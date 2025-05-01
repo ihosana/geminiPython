@@ -3,7 +3,7 @@ import speech_recognition as sr
 import pyttsx3
 import google.generativeai as genai
 
-# Configurações do modelo Gemini
+# Configurações do modelo Gemin
 genai.configure(api_key="AIzaSyCkNDj7Yzndmj0QVC4SLcq60lKMCaZDvsg")
 model = genai.GenerativeModel("models/gemini-1.5-pro")
 
@@ -40,7 +40,7 @@ def main():
         # Gera a resposta usando o modelo Gemini
         response = model.generate_content(pergunta)
         resposta_texto = response.text
-        print(f"Resposta do Gemini: {resposta_texto}")
+       # print(f"Resposta do Gemini: {resposta_texto}")
 
         # Responde ao usuário com voz
         falar_resposta(resposta_texto)
